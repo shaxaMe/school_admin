@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "cookie": "^0.5.0",
     "core-js": "^3.25.3",
     "element-ui": "^2.15.10",
+    "js-cookie": "^3.0.5",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
