@@ -17,6 +17,10 @@ export default {
   router: {
     middleware: "login",
   },
+  server: {
+    port: 8080,
+    host: '0.0.0.0',
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "element-ui/lib/theme-chalk/index.css",
