@@ -15,7 +15,25 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/logo.png" }],
   },
   router: {
-    middleware: "login",
+    // middleware: "login",
+    extendRoutes(routes, resolve) {
+      // Check if the code is running on the client-side
+      setTimeout(()=>{
+        if (process.client) {
+          // Access LocalStorage and modify routes accordingly
+          const isLoggedIn = JSON.parse(localStorage.DENT_UZ);
+          if (isLoggedIn.accaunt.loginIn ==false) {
+            // Modify the routes based on your condition
+            // For example, if the user is logged in, redirect to a private page
+            routes.push({
+              name: 'login',
+              path: '/login',
+              component: resolve(__dirname, 'pages/login.vue')
+            });
+          }
+        }
+      })
+    }
   },
   server: {
     port: 8080,
@@ -25,11 +43,12 @@ export default {
   css: [
     "element-ui/lib/theme-chalk/index.css",
     "~assets/css/main.scss",
+    '@/assets/css/tailwind.css',
     "~assets/css/helper.scss",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/element-ui",'~plugins/axios.js',],
+  plugins: ["@/plugins/element-ui",'~plugins/axios.js',{src: '~plugins/persistedstate.js', mode: 'client'},],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -46,6 +65,15 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
-    vendor:['axios']
+    vendor:['axios'],
+    postcss: {
+      postcssOptions: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
+      },
+    },
   },
+  // buildModules: ['@nuxtjs/tailwindcss']
 };

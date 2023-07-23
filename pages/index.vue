@@ -1,18 +1,27 @@
 <template>
-  <div class="container">
-    <Loading />
+  <client-only>
+  <div>
+    <h1>Hi Im home page</h1>
   </div>
+</client-only>
 </template>
 
 <script>
 import Loading from "@/components/Loading.vue";
 export default {
-  middleware: "login",
+  middleware: "homepage",
   components: {
     Loading,
   },
   data() {
     return {};
+  },
+  methods:{
+    getData(){
+      this.$axios.get('api/Organizations/Login?login='+ this.form.login+'&password'+this.form.password).then(res=>{
+         console.log('res');
+      })
+    }
   },
   head() {
     return {
@@ -62,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss">
-.container{
+.container {
   width: 100%;
   height: 100%;
 }
