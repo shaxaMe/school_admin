@@ -6,6 +6,9 @@
   background: var(--secondary-grey-300, #F4F7FE);
   font-family:'Poppins',sans-serif;
 }
+#myIcon{
+  fill: #FF0000;
+}
 
 .aside {
   max-width: 300px;
@@ -44,3 +47,31 @@
     padding: 20px 25px;
   }
 }
+h1,h2,h3,h4,h5,img,div,span,a,svg,p{
+  background: transparent;
+}
+.edit-btn{
+  display: flex;
+  width: fit-content;
+  max-width: 40px;
+  height: 20px;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: var(--primary-blue-500, #3965FF);
+  color: var(--black-amp-white-white, #FFF);
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  i{
+    background: transparent;
+  }
+}
+
+.sub-header{
+  border-bottom: 1px solid #E9EDF7;
+}
+

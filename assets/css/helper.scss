@@ -1,7 +1,116 @@
-:root{
-  --bg-main-color:#fff;
-  --aside-bg-color:#fff;
-  --secondary-primary-white:#fff;
-  --secondary-grey-300:#F4F7FE;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,400;0,600;0,800;0,900;1,300;1,700&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;1,200;1,500&display=swap');
+
+:root {
+  --bg-main-color: #fff;
+  --aside-bg-color: #fff;
+  --secondary-primary-white: #fff;
+  --secondary-grey-300: #F4F7FE;
 }
 
+table {
+  min-height: 20vh;
+
+  tr {
+    th {
+      text-align: start;
+    }
+  }
+}
+
+
+.nuxt-link-exact-active {
+  .active-primary-exact {
+    color: #2B3674 !important;
+
+    svg {
+      g {
+        path {
+          fill: #2B3674;
+        }
+      }
+    }
+
+    &:hover {
+      color: #A3AED0;
+    }
+  }
+}
+
+.nuxt-link-active {
+  .active-primary {
+    color: #2B3674 !important;
+
+    svg {
+      g {
+        path {
+          fill: #2B3674;
+        }
+      }
+    }
+
+    &:hover {
+      color: #A3AED0;
+    }
+  }
+}
+
+a .link {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: #A3AED0;
+  font-family: 'DM Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+
+  &:hover {
+    color: #2B3674;
+
+    svg {
+      g {
+        path {
+          fill: #2B3674;
+        }
+      }
+    }
+  }
+
+  svg {
+    g {
+      path {
+        fill: #A3AED0;
+      }
+    }
+  }
+}
+
+.el-pagination.is-background .el-pager {
+
+  .btn-prev,
+  .btn-next {
+    background: #F4F7FE;
+    border-radius: 4px;
+  }
+
+  li {
+    background-color: #F4F7FE;
+    border-radius: 4px;
+
+    &.active {
+      color: #4200FF !important;
+      border: 1px solid #4200FF;
+      background: #FFF !important;
+    }
+  }
+}
+
+.el-pager {
+  background: transparent;
+}
+
+.el-pagination {
+  background-color: #fff;
+  padding: 15px 10px;
+  border-radius: 0.375rem;
+}
