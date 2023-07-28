@@ -2,7 +2,7 @@
   <div class="default-view">
     <div class="flex default-view-app">
        <HomeAside />
-      <div class="w-full main">
+      <div class="main">
         <Nuxt />
       </div>
     </div>

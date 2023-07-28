@@ -87,12 +87,6 @@ a .link {
 
 .el-pagination.is-background .el-pager {
 
-  .btn-prev,
-  .btn-next {
-    background: #F4F7FE;
-    border-radius: 4px;
-  }
-
   li {
     background-color: #F4F7FE;
     border-radius: 4px;
@@ -103,6 +97,9 @@ a .link {
       background: #FFF !important;
     }
   }
+}
+.el-pagination.is-background .btn-prev,.btn-next{
+  border-radius: 4px;
 }
 
 .el-pager {

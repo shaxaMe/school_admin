@@ -101,7 +101,7 @@
 
 <script>
 export default {
-  // layout:"login",
+  layout:"login",
   data() {
     return {
       login: "",

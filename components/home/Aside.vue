@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full aside">
+  <div class="aside">
     <div class="w-full flex py-10 px-15 flex-col gap-10 aside-container">
       <div class="flex items-center justify-center w-full gap-1 bg-transparent">
         <img
