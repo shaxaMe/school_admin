@@ -17,7 +17,7 @@
           </div>
         </nuxt-link>
         <nuxt-link
-          to="/login"
+          to="/dashboard"
           class="flex justify-start w-full gap-2 text-decoration-none"
         >
           <div class="active-primary link">

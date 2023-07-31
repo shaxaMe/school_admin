@@ -48,7 +48,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/element-ui",'~plugins/axios.js',{src: '~plugins/persistedstate.js', mode: 'client'},],
+  plugins: ["@/plugins/element-ui",'~plugins/axios.js',{src: '~plugins/persistedstate.js', mode: 'client'},{src: '~plugins/aos.js', mode: 'client'}],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -65,7 +65,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
-    vendor:['axios'],
+    vendor:['axios','aos'],
     postcss: {
       postcssOptions: {
         plugins: {
